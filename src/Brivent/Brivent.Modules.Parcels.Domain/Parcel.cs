@@ -9,21 +9,22 @@ namespace Brivent.Modules.Parcels.Domain
         public float Weight { get; private set; }
         public ParcelSize Size { get; private set; }
         public DateTime CreateDate { get; private set; }
-        public DateTime UpdateDate { get; private set; }
         
         private Parcel()
         {
             // EF Core constructor
         }
 
-        public Parcel(Guid id, string description, float weight, DateTime createDate, 
-            DateTime updateDate)
+        private Parcel(string description, float weight, ParcelSize size)
         {
-            Id = id;
+            Id = Guid.NewGuid();
             Description = description;
             Weight = weight;
-            CreateDate = createDate;
-            UpdateDate = updateDate;
+            Size = size;
+            CreateDate = DateTime.Now;
         }
+
+        public static Parcel Create(string description, float weight, ParcelSize size)
+            => new Parcel(description, weight, size);
     }
 }
