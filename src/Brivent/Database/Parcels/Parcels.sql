@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Parcels]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+	[Weight] REAL NOT NULL,
+	[Size] INT NOT NULL,
+	[Description] NVARCHAR(500),
+	[CreateDate] DATETIME2 NOT NULL
+)
+
+GO

@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Brivent.Modules.Parcels.Application;
+using FluentValidation;
 using MediatR;
 
 namespace Brivent.Modules.Parcels.Infrastructure.Autofac
@@ -13,17 +14,25 @@ namespace Brivent.Modules.Parcels.Infrastructure.Autofac
                 .As<IMediator>()
                 .InstancePerLifetimeScope();
 
+            var registrationTypes = new[]
+            {
+                typeof(IRequestHandler<,>),
+                typeof(IValidator<>)
+            };
+
+            foreach (var registrationType in registrationTypes)
+            {
+                builder.RegisterAssemblyTypes(typeof(ICommand).Assembly, ThisAssembly)
+                    .AsClosedTypesOf(registrationType)
+                    .AsImplementedInterfaces()
+                    .FindConstructorsWith(new AllConstructorFinder());
+            }
+
             builder.Register<ServiceFactory>(context =>
             {
                 var componentContent = context.Resolve<IComponentContext>();
                 return t => componentContent.Resolve(t);
-            });
-
-            // Register CommandHandlers
-            builder.RegisterAssemblyTypes(typeof(ICommandHandler<>).Assembly, ThisAssembly)
-                .AsClosedTypesOf(typeof(IRequestHandler<,>))
-                .AsImplementedInterfaces()
-                .InstancePerLifetimeScope();
+            }).InstancePerLifetimeScope();
         }
     }
 }

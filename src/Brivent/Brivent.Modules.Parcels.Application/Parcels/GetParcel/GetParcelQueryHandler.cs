@@ -17,12 +17,17 @@ namespace Brivent.Modules.Parcels.Application
         {
             var parcel = await _parcelRepository.GetParcelAsync(request.Id);
 
-            return new ParcelDto
+            if (!(parcel is null))
             {
-                Description = parcel.Description,
-                Size = (int)parcel.Size,
-                Weight = parcel.Weight
-            };
+                return new ParcelDto
+                {
+                    Description = parcel.Description,
+                    Size = (int)parcel.Size,
+                    Weight = parcel.Weight
+                };
+            }
+
+            return null;
         }
     }
 }

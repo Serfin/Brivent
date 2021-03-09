@@ -1,12 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="6.1.0" />
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="Autofac" Version="4.9.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.3.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -14,6 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Brivent.Modules.ParcelLockers.Application\Brivent.Modules.ParcelLockers.Application.csproj" />
+    <ProjectReference Include="..\Brivent.Modules.ParcelLockers.Infrastructure\Brivent.Modules.ParcelLockers.Infrastructure.csproj" />
     <ProjectReference Include="..\Brivent.Modules.Parcels.Application\Brivent.Modules.Parcels.Application.csproj" />
     <ProjectReference Include="..\Brivent.Modules.Parcels.Infrastructure\Brivent.Modules.Parcels.Infrastructure.csproj" />
   </ItemGroup>

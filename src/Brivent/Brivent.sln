@@ -9,13 +9,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{EA44
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parcels", "Parcels", "{8CFF0E5E-0652-4B65-9655-6E7C640141FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brivent.Modules.Parcels.Domain", "Brivent.Modules.Parcels.Domain\Brivent.Modules.Parcels.Domain.csproj", "{D41D7864-4BED-4C41-A8EB-9F0262FBCBC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brivent.Modules.Parcels.Domain", "Brivent.Modules.Parcels.Domain\Brivent.Modules.Parcels.Domain.csproj", "{D41D7864-4BED-4C41-A8EB-9F0262FBCBC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brivent.Modules.Parcels.Application", "Brivent.Modules.Parcels.Application\Brivent.Modules.Parcels.Application.csproj", "{7E365877-AD9A-42FE-9FBC-EAD6E31092EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brivent.Modules.Parcels.Application", "Brivent.Modules.Parcels.Application\Brivent.Modules.Parcels.Application.csproj", "{7E365877-AD9A-42FE-9FBC-EAD6E31092EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brivent.Modules.Parcels.Infrastructure", "Brivent.Modules.Parcels.Infrastructure\Brivent.Modules.Parcels.Infrastructure.csproj", "{10ADC585-4C3D-4F26-A741-992FB88B5E47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brivent.Modules.Parcels.Infrastructure", "Brivent.Modules.Parcels.Infrastructure\Brivent.Modules.Parcels.Infrastructure.csproj", "{10ADC585-4C3D-4F26-A741-992FB88B5E47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brivent.API", "Brivent.API\Brivent.API.csproj", "{F4DA8CAA-E458-42D7-84C0-D021DB489D5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brivent.API", "Brivent.API\Brivent.API.csproj", "{F4DA8CAA-E458-42D7-84C0-D021DB489D5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{959554D2-9A76-4D31-8F5D-533E26AFD927}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brivent.BuildingBlocks.Application", "Brivent.BuildingBlocks.Application\Brivent.BuildingBlocks.Application.csproj", "{E1D65E3A-1B8A-4047-B535-F4D33812A7D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ParcelLockers", "ParcelLockers", "{207E8FB3-CA07-4D08-84E1-DE8691E36B8C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brivent.Modules.ParcelLockers.Domain", "Brivent.Modules.ParcelLockers.Domain\Brivent.Modules.ParcelLockers.Domain.csproj", "{B24423AA-4664-4E4D-AD2F-22B81E7CF21B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brivent.Modules.ParcelLockers.Infrastructure", "Brivent.Modules.ParcelLockers.Infrastructure\Brivent.Modules.ParcelLockers.Infrastructure.csproj", "{943F240A-865A-4B7C-A9F3-1AAEB5497B62}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brivent.Modules.ParcelLockers.Application", "Brivent.Modules.ParcelLockers.Application\Brivent.Modules.ParcelLockers.Application.csproj", "{4E820D58-5579-4714-BBD7-C61FBFA0404C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{F748E5AD-CCAB-4298-AA64-EEFEC9432997}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{83276E5C-2420-4639-84AF-08F666E96750}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +55,28 @@ Global
 		{F4DA8CAA-E458-42D7-84C0-D021DB489D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4DA8CAA-E458-42D7-84C0-D021DB489D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4DA8CAA-E458-42D7-84C0-D021DB489D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D65E3A-1B8A-4047-B535-F4D33812A7D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D65E3A-1B8A-4047-B535-F4D33812A7D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D65E3A-1B8A-4047-B535-F4D33812A7D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D65E3A-1B8A-4047-B535-F4D33812A7D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B24423AA-4664-4E4D-AD2F-22B81E7CF21B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24423AA-4664-4E4D-AD2F-22B81E7CF21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24423AA-4664-4E4D-AD2F-22B81E7CF21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24423AA-4664-4E4D-AD2F-22B81E7CF21B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{943F240A-865A-4B7C-A9F3-1AAEB5497B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{943F240A-865A-4B7C-A9F3-1AAEB5497B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{943F240A-865A-4B7C-A9F3-1AAEB5497B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{943F240A-865A-4B7C-A9F3-1AAEB5497B62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E820D58-5579-4714-BBD7-C61FBFA0404C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E820D58-5579-4714-BBD7-C61FBFA0404C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E820D58-5579-4714-BBD7-C61FBFA0404C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E820D58-5579-4714-BBD7-C61FBFA0404C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83276E5C-2420-4639-84AF-08F666E96750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83276E5C-2420-4639-84AF-08F666E96750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83276E5C-2420-4639-84AF-08F666E96750}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{83276E5C-2420-4639-84AF-08F666E96750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83276E5C-2420-4639-84AF-08F666E96750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83276E5C-2420-4639-84AF-08F666E96750}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +87,12 @@ Global
 		{7E365877-AD9A-42FE-9FBC-EAD6E31092EB} = {8CFF0E5E-0652-4B65-9655-6E7C640141FE}
 		{10ADC585-4C3D-4F26-A741-992FB88B5E47} = {8CFF0E5E-0652-4B65-9655-6E7C640141FE}
 		{F4DA8CAA-E458-42D7-84C0-D021DB489D5B} = {D30AAFA5-969D-4628-B792-BAE86BBF120C}
+		{E1D65E3A-1B8A-4047-B535-F4D33812A7D9} = {959554D2-9A76-4D31-8F5D-533E26AFD927}
+		{207E8FB3-CA07-4D08-84E1-DE8691E36B8C} = {EA4403CD-EA14-4F7F-8CAA-F0EAAB39539F}
+		{B24423AA-4664-4E4D-AD2F-22B81E7CF21B} = {207E8FB3-CA07-4D08-84E1-DE8691E36B8C}
+		{943F240A-865A-4B7C-A9F3-1AAEB5497B62} = {207E8FB3-CA07-4D08-84E1-DE8691E36B8C}
+		{4E820D58-5579-4714-BBD7-C61FBFA0404C} = {207E8FB3-CA07-4D08-84E1-DE8691E36B8C}
+		{83276E5C-2420-4639-84AF-08F666E96750} = {F748E5AD-CCAB-4298-AA64-EEFEC9432997}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF465430-C659-4438-89CC-DE9B118727C4}

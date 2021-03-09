@@ -1,4 +1,3 @@
-using System;
 using Brivent.Modules.Parcels.Domain;
 using Microsoft.EntityFrameworkCore;
 

@@ -1,19 +1,24 @@
-﻿using Autofac;
+﻿using System.Linq;
+using Autofac;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Brivent.Modules.Parcels.Infrastructure.Autofac
 {
-    public class ParcelsModule : Module
+    public class DataAccessModule : Module
     {
         private readonly string _connectionString;
-        public ParcelsModule(string connectionString)
+        private readonly ILoggerFactory _loggerFactory;
+
+        public DataAccessModule(string connectionString, ILoggerFactory loggerFactory)
         {
             _connectionString = connectionString;
+            _loggerFactory = loggerFactory;
         }
 
         protected override void Load(ContainerBuilder builder)
         {
-            var infrastructureAssembly = typeof(ParcelsModule).Assembly;
+            var infrastructureAssembly = typeof(DataAccessModule).Assembly;
 
             builder.RegisterAssemblyTypes(infrastructureAssembly)
                 .Where(t => t.Name.EndsWith("Repository"))
@@ -23,6 +28,7 @@ namespace Brivent.Modules.Parcels.Infrastructure.Autofac
             builder.Register(c =>
             {
                 var dbContextOptionsBuilder = new DbContextOptionsBuilder<ParcelsContext>();
+                dbContextOptionsBuilder.UseLoggerFactory(_loggerFactory);
                 dbContextOptionsBuilder.UseSqlServer(_connectionString);
 
                 return new ParcelsContext(dbContextOptionsBuilder.Options);

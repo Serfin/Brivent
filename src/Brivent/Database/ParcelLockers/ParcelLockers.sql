@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[ParcelLockers]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY
+)
+
+GO

@@ -7,5 +7,6 @@ namespace Brivent.Modules.Parcels.Domain
     {
         Task CreateParcelAsync(Parcel parcel);
         Task<Parcel> GetParcelAsync(Guid id);
+        Task DeleteParcelAsync(Parcel parcel);
     }
 }
