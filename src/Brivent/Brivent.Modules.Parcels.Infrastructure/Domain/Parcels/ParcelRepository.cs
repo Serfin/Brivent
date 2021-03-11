@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 using Brivent.Modules.Parcels.Domain;
-using Microsoft.EntityFrameworkCore;
 
 namespace Brivent.Modules.Parcels.Infrastructure
 {
@@ -23,6 +22,12 @@ namespace Brivent.Modules.Parcels.Infrastructure
         public async Task<Parcel> GetParcelAsync(Guid id)
         {
             return await _parcelsContext.Parcels.FindAsync(id);
+        }
+
+        public async Task UpdateParcelAsync(Parcel parcel)
+        {
+            _parcelsContext.Parcels.Update(parcel);
+            await _parcelsContext.SaveChangesAsync();
         }
 
         public async Task DeleteParcelAsync(Parcel parcel)

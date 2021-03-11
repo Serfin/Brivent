@@ -67,4 +67,8 @@
     <Build Include="ParcelLockers\ParcelLockersLocalization.sql" />
     <Build Include="ParcelLockers\ParcelLockersContent.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Init.sql" />
+    <None Include="Seed.sql" />
+  </ItemGroup>
 </Project>

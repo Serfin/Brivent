@@ -1,13 +1,12 @@
-﻿using Brivent.Modules.Parcels.Domain;
-using FluentValidation;
+﻿using FluentValidation;
 
-namespace Brivent.Modules.Parcels.Application.Parcels.CreateParcel
+namespace Brivent.Modules.Parcels.Application.Parcels
 {
     public class CreateParcelCommandValidator : AbstractValidator<CreateParcelCommand>
     {
         public CreateParcelCommandValidator()
         {
-            this.RuleFor(x => x.Size).InclusiveBetween((int)ParcelSize.Small, (int)ParcelSize.ExtraLarge)
+            this.RuleFor(x => x.Size).IsInEnum()
                 .WithMessage("Size of parcel cannot exceed the range of allowed sizes");
 
             this.RuleFor(x => x.Weight).GreaterThan(0)

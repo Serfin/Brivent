@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Brivent.Modules.Parcels.Application;
+using Brivent.Modules.Parcels.Application.Parcels;
 using Brivent.Modules.Parcels.Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -42,8 +42,17 @@ namespace Brivent.API.Modules.Parcels
             return Ok(parcel);
         }
 
+        [HttpPatch("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> Patch([FromRoute] UpdateParcelCommand updateParcelCommand)
+        {
+            await _parcelsModule.ExecuteCommandAsync(updateParcelCommand);
+
+            return Ok();
+        }
+
         [HttpDelete("{Id}")]
-        [ProducesResponseType(typeof(ParcelDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Delete([FromRoute] DeleteParcelCommand deleteParcelCommand)
         {
