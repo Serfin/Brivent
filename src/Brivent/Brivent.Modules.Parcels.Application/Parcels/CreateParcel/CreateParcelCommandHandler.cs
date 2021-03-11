@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Brivent.Modules.Parcels.Domain;
 
-namespace Brivent.Modules.Parcels.Application
+namespace Brivent.Modules.Parcels.Application.Parcels
 {
     public class CreateParcelCommandHandler : ICommandHandler<CreateParcelCommand, Guid>
     {

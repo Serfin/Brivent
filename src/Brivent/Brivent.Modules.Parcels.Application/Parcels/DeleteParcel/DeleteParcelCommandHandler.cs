@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Brivent.Modules.Parcels.Domain;
 using MediatR;
 
-namespace Brivent.Modules.Parcels.Application
+namespace Brivent.Modules.Parcels.Application.Parcels
 {
     public class DeleteParcelCommandHandler : ICommandHandler<DeleteParcelCommand>
     {

@@ -1,7 +1,5 @@
-﻿using System;
-using Autofac;
+﻿using Autofac;
 using Brivent.Modules.Parcels.Application;
-using MediatR;
 
 namespace Brivent.Modules.Parcels.Infrastructure.Autofac
 {
@@ -12,7 +10,7 @@ namespace Brivent.Modules.Parcels.Infrastructure.Autofac
             builder.RegisterGenericDecorator(
                 typeof(LoggingCommandHandlerDecorator<>),
                 typeof(ICommandHandler<>));
-            
+
             builder.RegisterGenericDecorator(
                 typeof(LoggingCommandHandlerWithResultDecorator<,>),
                 typeof(ICommandHandler<,>));

@@ -13,7 +13,7 @@ namespace Brivent.Modules.Parcels.Infrastructure
         private readonly ICommandHandler<T, TResult> _decoratedHandler;
 
         public LoggingCommandHandlerWithResultDecorator(
-            ILogger logger, 
+            ILogger logger,
             ICommandHandler<T, TResult> decoratedHandler)
         {
             _logger = logger;

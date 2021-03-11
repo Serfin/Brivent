@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Brivent.Modules.Parcels.Application
+namespace Brivent.Modules.Parcels.Application.Parcels
 {
     public class DeleteParcelCommand : ICommand
     {

@@ -20,7 +20,7 @@ namespace Brivent.Modules.Parcels.Infrastructure
         }
 
         private static void ConfigureCompositionRoot(
-            string connectionString, 
+            string connectionString,
             ILogger moduleLogger)
         {
             var containerBuilder = new ContainerBuilder();

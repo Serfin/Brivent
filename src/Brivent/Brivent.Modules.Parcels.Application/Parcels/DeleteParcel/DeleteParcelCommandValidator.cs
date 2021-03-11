@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Brivent.Modules.Parcels.Application
+namespace Brivent.Modules.Parcels.Application.Parcels
 {
     public class DeleteParcelCommandValidator : AbstractValidator<DeleteParcelCommand>
     {

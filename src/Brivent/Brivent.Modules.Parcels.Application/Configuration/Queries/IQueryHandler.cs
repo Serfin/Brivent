@@ -6,6 +6,6 @@ namespace Brivent.Modules.Parcels.Application
         IRequestHandler<TQuery, TResult>
         where TQuery : IQuery<TResult>
     {
-         
+
     }
 }

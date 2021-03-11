@@ -9,7 +9,7 @@
         public string PostalCode { get; private set; }
         public string Street { get; private set; }
 
-        public ParcelLockerLocalization(float longtitude, float latitude, 
+        public ParcelLockerLocalization(float longtitude, float latitude,
             string additionalInfo, string city, string postalCode, string street)
         {
             Longtitude = longtitude;

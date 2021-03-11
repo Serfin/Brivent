@@ -10,7 +10,7 @@ namespace Brivent.Modules.ParcelLockers.Infrastructure.Autofac
             builder.RegisterGenericDecorator(
                 typeof(LoggingCommandHandlerDecorator<>),
                 typeof(ICommandHandler<>));
-            
+
             builder.RegisterGenericDecorator(
                 typeof(LoggingCommandHandlerWithResultDecorator<,>),
                 typeof(ICommandHandler<,>));

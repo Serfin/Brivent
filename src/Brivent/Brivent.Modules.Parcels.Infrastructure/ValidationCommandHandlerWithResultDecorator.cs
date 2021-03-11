@@ -15,7 +15,7 @@ namespace Brivent.Modules.Parcels.Infrastructure
         private readonly ICommandHandler<T, TResult> _decoratedHandler;
 
         public ValidationCommandHandlerWithResultDecorator(
-            IList<IValidator<T>> validators, 
+            IList<IValidator<T>> validators,
             ICommandHandler<T, TResult> decoratedHandler)
         {
             _validators = validators;

@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 using Brivent.Modules.ParcelLockers.Domain;
-using Microsoft.EntityFrameworkCore;
 
 namespace Brivent.Modules.ParcelLockers.Infrastructure
 {

@@ -14,7 +14,7 @@ namespace Brivent.Modules.ParcelLockers.Domain
             // EF Core constructor
         }
 
-        private ParcelLocker(ParcelLockerLocalization localization, 
+        private ParcelLocker(ParcelLockerLocalization localization,
             List<Parcel> parcels)
         {
             Id = Guid.NewGuid();
