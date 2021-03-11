@@ -1,22 +1,25 @@
 ﻿using System.Collections.Generic;
-using Brivent.BuildingBlocks.Application;
-using Microsoft.AspNetCore.Http;
 
 namespace Brivent.API.Configuration.Validation
 {
     public class ResponseExceptionDetails
     {
         public string Title { get; set; }
-        public int Status { get; set; }
+        public int Code { get; set; }
         public List<string> Errors { get; set; }
+
+        public ResponseExceptionDetails()
+        {
+
+        }
 
         public ResponseExceptionDetails(
             string title,
-            int status,
+            int code,
             List<string> errors)
         {
             Title = title;
-            Status = status;
+            Code = code;
             Errors = errors;
         }
     }
