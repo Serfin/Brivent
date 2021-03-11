@@ -10,7 +10,7 @@ namespace Brivent.Modules.ParcelLockers.Infrastructure
         public ParcelLockersContext(DbContextOptions dbContextOptions)
             : base(dbContextOptions)
         {
-            
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace Brivent.Modules.ParcelLockers.Infrastructure
                 .OwnsMany(x => x.Parcels, y =>
                 {
                     y.ToTable("ParcelLockersContent");
-                    y.WithOwner().HasForeignKey("Id");
+                    y.WithOwner().HasForeignKey("ParcelLockerId");
                 });
         }
     }
