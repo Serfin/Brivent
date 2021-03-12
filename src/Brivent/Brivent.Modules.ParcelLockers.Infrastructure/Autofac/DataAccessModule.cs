@@ -29,7 +29,12 @@ namespace Brivent.Modules.ParcelLockers.Infrastructure.Autofac
                 .Register(c =>
                 {
                     var dbContextOptionsBuilder = new DbContextOptionsBuilder<ParcelLockersContext>();
-                    dbContextOptionsBuilder.UseSqlServer(_connectionString);
+                    dbContextOptionsBuilder.UseLoggerFactory(_loggerFactory);
+                    dbContextOptionsBuilder.UseSqlServer(_connectionString, x =>
+                    {
+                        x.CommandTimeout(30);
+                        x.EnableRetryOnFailure(3);
+                    });
 
                     return new ParcelLockersContext(dbContextOptionsBuilder.Options);
                 })

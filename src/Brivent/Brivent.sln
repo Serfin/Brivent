@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{F7
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{83276E5C-2420-4639-84AF-08F666E96750}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brivent.BuildingBlocks.Domain", "Brivent.BuildingBlocks.Domain\Brivent.BuildingBlocks.Domain.csproj", "{821729A0-98C8-406B-89EB-E91ABBBF5D5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +78,10 @@ Global
 		{83276E5C-2420-4639-84AF-08F666E96750}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83276E5C-2420-4639-84AF-08F666E96750}.Release|Any CPU.Build.0 = Release|Any CPU
 		{83276E5C-2420-4639-84AF-08F666E96750}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{821729A0-98C8-406B-89EB-E91ABBBF5D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{821729A0-98C8-406B-89EB-E91ABBBF5D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{821729A0-98C8-406B-89EB-E91ABBBF5D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{821729A0-98C8-406B-89EB-E91ABBBF5D5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{943F240A-865A-4B7C-A9F3-1AAEB5497B62} = {207E8FB3-CA07-4D08-84E1-DE8691E36B8C}
 		{4E820D58-5579-4714-BBD7-C61FBFA0404C} = {207E8FB3-CA07-4D08-84E1-DE8691E36B8C}
 		{83276E5C-2420-4639-84AF-08F666E96750} = {F748E5AD-CCAB-4298-AA64-EEFEC9432997}
+		{821729A0-98C8-406B-89EB-E91ABBBF5D5F} = {959554D2-9A76-4D31-8F5D-533E26AFD927}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF465430-C659-4438-89CC-DE9B118727C4}

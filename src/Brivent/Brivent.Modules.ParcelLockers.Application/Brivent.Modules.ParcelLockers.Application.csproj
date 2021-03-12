@@ -13,4 +13,8 @@
     <ProjectReference Include="..\Brivent.Modules.ParcelLockers.Domain\Brivent.Modules.ParcelLockers.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ParcelLockerContentManagement\DeleteParcelFromLocker\" />
+  </ItemGroup>
+
 </Project>

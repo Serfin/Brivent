@@ -23,5 +23,11 @@ namespace Brivent.Modules.ParcelLockers.Infrastructure
         {
             return await _parcelsContext.ParcelLockers.FindAsync(id);
         }
+
+        public async Task UpdateParcelLockerAsync(ParcelLocker parcelLocker)
+        {
+            _parcelsContext.ParcelLockers.Update(parcelLocker);
+            await _parcelsContext.SaveChangesAsync();
+        }
     }
 }

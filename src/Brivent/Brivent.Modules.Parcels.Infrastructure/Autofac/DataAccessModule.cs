@@ -29,7 +29,11 @@ namespace Brivent.Modules.Parcels.Infrastructure.Autofac
             {
                 var dbContextOptionsBuilder = new DbContextOptionsBuilder<ParcelsContext>();
                 dbContextOptionsBuilder.UseLoggerFactory(_loggerFactory);
-                dbContextOptionsBuilder.UseSqlServer(_connectionString);
+                dbContextOptionsBuilder.UseSqlServer(_connectionString, x =>
+                {
+                    x.CommandTimeout(30);
+                    x.EnableRetryOnFailure(3);
+                });
 
                 return new ParcelsContext(dbContextOptionsBuilder.Options);
             })

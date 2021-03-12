@@ -4,8 +4,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Brivent.BuildingBlocks.Domain\Brivent.BuildingBlocks.Domain.csproj" />
-  </ItemGroup>
-
 </Project>
