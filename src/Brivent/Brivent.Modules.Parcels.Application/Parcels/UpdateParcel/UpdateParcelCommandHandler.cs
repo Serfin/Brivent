@@ -24,7 +24,7 @@ namespace Brivent.Modules.Parcels.Application.Parcels.UpdateParcel
                 throw new ApplicationException($"Parcel with id: '{request.Id}' does not exist");
             }
 
-            parcel.SetStatus(request.Status);
+            parcel.SetStatus((ParcelStatus)request.Status);
 
             await _parcelRepository.UpdateParcelAsync(parcel);
 

@@ -21,9 +21,11 @@ namespace Brivent.Modules.Parcels.Application.Parcels
             {
                 return new ParcelDto
                 {
-                    Description = parcel.Description,
                     Size = (int)parcel.Size,
-                    Weight = parcel.Weight
+                    Status = (int)parcel.Status,
+                    Weight = parcel.Weight,
+                    Description = parcel.Description,
+                    CreateDate = parcel.CreateDate
                 };
             }
 

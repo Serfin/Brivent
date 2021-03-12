@@ -42,10 +42,12 @@ namespace Brivent.API.Modules.Parcels
             return Ok(parcel);
         }
 
-        [HttpPatch("{id}")]
+        [HttpPatch("{Id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> Patch([FromRoute] UpdateParcelCommand updateParcelCommand)
+        public async Task<IActionResult> Patch([FromRoute] Guid Id, [FromBody] UpdateParcelCommand updateParcelCommand)
         {
+            updateParcelCommand.Id = Id;
+
             await _parcelsModule.ExecuteCommandAsync(updateParcelCommand);
 
             return Ok();

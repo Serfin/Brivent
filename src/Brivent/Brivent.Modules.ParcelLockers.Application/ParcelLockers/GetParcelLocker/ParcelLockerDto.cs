@@ -6,5 +6,6 @@ namespace Brivent.Modules.ParcelLockers.Application.ParcelLockers
     {
         public Guid Id { get; set; }
         public ParcelLockerLocalizationDto Localization { get; set; }
+        public DateTime CreateDate { get; set; }
     }
 }

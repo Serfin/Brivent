@@ -29,7 +29,8 @@ namespace Brivent.Modules.ParcelLockers.Application.ParcelLockers
                         AdditionalInfo = parcelLocker.Localization.AdditionalInfo,
                         City = parcelLocker.Localization.City,
                         PostalCode = parcelLocker.Localization.PostalCode
-                    }
+                    },
+                    CreateDate = parcelLocker.CreateDate
                 };
             }
 

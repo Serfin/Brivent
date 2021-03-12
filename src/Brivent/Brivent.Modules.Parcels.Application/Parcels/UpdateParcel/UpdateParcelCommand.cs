@@ -6,6 +6,6 @@ namespace Brivent.Modules.Parcels.Application.Parcels
     public class UpdateParcelCommand : ICommand
     {
         public Guid Id { get; set; }
-        public ParcelStatus Status { get; set; }
+        public int Status { get; set; }
     }
 }
