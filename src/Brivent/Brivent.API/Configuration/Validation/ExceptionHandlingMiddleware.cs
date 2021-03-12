@@ -33,6 +33,8 @@ namespace Brivent.API.Configuration.Validation
             catch (CommandValidationException exception)
             {
                 _logger.LogError(exception, "Command processing resulted with validation error");
+
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
                 await context.Response.WriteAsJsonAsync(new ResponseExceptionDetails(
                     "Command validation error", StatusCodes.Status400BadRequest, exception.ValidationErrors));
             }
@@ -49,6 +51,7 @@ namespace Brivent.API.Configuration.Validation
                         : null
                 };
 
+                context.Response.StatusCode = StatusCodes.Status500InternalServerError;
                 await context.Response.WriteAsJsonAsync(responseExceptionDetails);
             }
         }
